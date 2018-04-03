@@ -5,6 +5,7 @@ const Discord = require('discord.js');
 const randomLorem = require('random-lorem');
 const client = new Discord.Client();
 const uuid = require('uuid');
+
 if (config.token == "") {
     console.error("You need to provide a token!")
     process.exit(2)
@@ -57,13 +58,14 @@ client.on('message', message => {
         })
     } else if (activeverifies.get(message.guild.id).get(message.author.id) == 2) {
         let id = ids.get(message.author.id)
+        let role = message.guild.roles.find("name", "Verified");
         roblox.getBlurb(id[0]).then((blurb) => {
             if (blurb.includes(id[1])) {
                 message.channel.send({embed: {
                     title: "Verification complete!",
                     description: "Verification success"
                 }})
-                message.member.addRole("Verified")
+                message.member.addRole(role)
                 message.member.setNickname(id[2])
                 console.log("User: `"+id[2]+"` has been successfully verified")
             } else {
