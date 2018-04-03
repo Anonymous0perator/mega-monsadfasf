@@ -63,7 +63,7 @@ client.on('message', message => {
                     title: "Verification complete!",
                     description: "Verification success"
                 }})
-                message.member.addRole(config.role)
+                message.member.addRole("Verified")
                 message.member.setNickname(id[2])
                 console.log("User: `"+id[2]+"` has been successfully verified")
             } else {
