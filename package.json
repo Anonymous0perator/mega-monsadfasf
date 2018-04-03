@@ -1,0 +1,15 @@
+{
+  "name": "gayboy",
+  "description": "gayboy",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+ "dependencies": {
+    "discord.js": "^11.1.0",
+    "random-lorem": "^1.0.4",
+    "roblox-js": "^3.0.6",
+    "uws": "^8.14.0"
+  }
+}
