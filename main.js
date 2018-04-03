@@ -27,7 +27,7 @@ client.on("guildCreate", guild => {
 })
 client.on('message', message => {
     if (message.channel.id) {
-    if (message.content === '!verify') {
+    if (message.content === ':verify') {
         if (message.member.roles.has(config.role)) {
             message.reply("You are already verified!")
         } else {
