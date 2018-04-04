@@ -50,12 +50,10 @@ client.on('message', message => {
                 title: "Verification",
                 description: "Add the code`"+theid+"` to your roblox profile description and send anything when done."
              }});
-            
             ids.set(message.author.id, [id, theid, message.content]);
             activeverifies.get(message.guild.id).set(message.author.id, 2);
         }).catch( (reason) => {
             message.reply("Mission failed with: " + reason.toString())
-            
             activeverifies.get(message.guild.id).delete(message.author.id);
         })
     } else if (activeverifies.get(message.guild.id).get(message.author.id) == 2) {
@@ -70,10 +68,8 @@ client.on('message', message => {
                 message.member.addRole(role)
                 message.member.setNickname(id[2])
                 console.log("User: `"+id[2]+"` has been successfully verified")
-                
             } else {
                 message.reply("I couldnt find that in your description...\n Try again? `!verify`")
-               
             }
             activeverifies.get(message.guild.id).delete(message.author.id)
         }).catch( (reason) => {
