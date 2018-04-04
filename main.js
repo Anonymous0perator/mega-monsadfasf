@@ -60,7 +60,7 @@ client.on('message', message => {
         })
     } else if (activeverifies.get(message.guild.id).get(message.author.id) == 2) {
         let id = ids.get(message.author.id)
-        let role = message.guild.roles.find("name", "Verified");
+        let role = message.guild.roles.find("name", "Iceland Personal");
         roblox.getBlurb(id[0]).then((blurb) => {
             if (blurb.includes(id[1])) {
                 message.channel.send({embed: {
