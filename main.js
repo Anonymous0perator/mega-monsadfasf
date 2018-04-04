@@ -69,7 +69,7 @@ client.on('message', message => {
                 message.member.setNickname(id[2])
                 console.log("User: `"+id[2]+"` has been successfully verified")
             } else {
-                message.reply("I couldnt find that in your description...\n Try again? `!verify`")
+                message.reply("I couldnt find that in your description...\n Try again? `:verify`")
             }
             activeverifies.get(message.guild.id).delete(message.author.id)
         }).catch( (reason) => {
