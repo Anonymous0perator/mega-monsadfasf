@@ -4,6 +4,7 @@ var rbx = require('roblox-js');
 const randomLorem = require('random-lorem');
 const uuid = require('uuid');
 const fs = require('fs');
+const config = require('./config.json');
 let activeverifies = new Map()
 let ids = new Map()
 client.on('ready', () => {
