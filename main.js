@@ -17,7 +17,7 @@ client.on('ready', () => {
   console.log('Bot is up and running!');
   client.user.setPresence({
     game: {
-      name :(``),
+      name :(`BETA`),
       type: 0
     }
   });
