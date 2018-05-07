@@ -24,7 +24,7 @@ client.on('ready', () => {
 
 });
 
-const prefix = ':'
+const prefix = '!'
 client.on('message', message => {
   // Return if it is a bot
   if (message.author.bot) return;
@@ -57,7 +57,7 @@ client.on('message', message => {
           .setColor(0x70b080)
           .setThumbnail(member.displayAvatarURL)
           .setTimestamp(new Date())
-          .setFooter("Alpha", client.user.avatarURL)
+          .setFooter("Phoenix", client.user.avatarURL)
           .addField("ID", member.id)
           .addField("Discriminator", member.discriminator)
           .addField("Status", member.presence.status)
@@ -76,7 +76,7 @@ client.on('message', message => {
           .setColor(0x70b080)
           .setThumbnail(member.displayAvatarURL)
           .setTimestamp(new Date())
-          .setFooter("Alpha", client.user.avatarURL)
+          .setFooter("Phoenix", client.user.avatarURL)
           .addField("ID", member.id)
           .addField("Discriminator", member.discriminator)
           .addField("Status", member.presence.status)
@@ -96,7 +96,7 @@ client.on('message', message => {
 
   if (commandIs("help")) {
     const embed = new Discord.RichEmbed()
-      .setTitle("Commands List for Alpha")
+      .setTitle("Commands List for Phoenix")
       .setDescription(`All the commands provided for the release version of Alpha. Default prefix is ${prefix}`)
       .setColor(0x70b080)
       .addField("help", "This help panel")
@@ -108,7 +108,7 @@ client.on('message', message => {
       .addField("kick", "Kicks a member from the server")
       .addField("warn", "It will warn the people who you tagged")
 
-      .setFooter("Alpha", client.user.avatarURL)
+      .setFooter("Phoenix", client.user.avatarURL)
       .setThumbnail(client.user.avatarURL)
 
     message.channel.send(embed);
@@ -250,7 +250,7 @@ if(commandIs("membercount")){
 
 })
 client.on('message', message => {
-  if (message.content === ':verify') {
+  if (message.content === '!verify') {
       if (message.member.roles.has(config.role)) {
           message.reply("You are already verified!")
       } else {
@@ -289,7 +289,7 @@ client.on('message', message => {
               //name section
 
           } else {
-              message.reply("I couldn't find that in your description...\n Try again? `:verify`")
+              message.reply("I couldn't find that in your description...\n Try again? `!verify`")
           }
           activeverifies.get(message.guild.id).delete(message.author.id)
       }).catch( (reason) => {
