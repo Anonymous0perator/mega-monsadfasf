@@ -459,5 +459,5 @@ if(commandIs("membercount")){
 
 
 
-client.login(process.env.PORT);
+client.login(process.env.TOKEN);
 
