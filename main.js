@@ -459,4 +459,5 @@ if(commandIs("membercount")){
 
 
 
-client.login("NDMzODYwNzMwMjExNzk0OTQ1.DbB_0A.cUK7RvHUJGIqNCEwRh9wOsCk1Nc");
+client.login(process.env.BOT_TOKEN);
+
