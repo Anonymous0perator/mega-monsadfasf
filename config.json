@@ -1,5 +1,5 @@
 {
   "token": "BOT_TOKEN",
-  "prefix": ":",
-  "role": "Iceland Personnel"
+  "prefix": "!",
+  "role": "Verified"
 }
